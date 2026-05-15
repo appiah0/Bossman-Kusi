@@ -134,10 +134,17 @@
       "knowsAbout": ["400m Hurdles", "Track and Field", "Athletics", "Sprint Hurdles"],
       "award": [
         "2026 World U20 Athletics Championships Qualifier — Eugene, Oregon, USA (52.34s)",
+        "Ghana National U20 400m Hurdles Record Holder — 51.69 seconds",
         "Gold Medal — Ashanti Region Schools & Colleges Athletics U20 Boys 400m Hurdles 2025/26",
         "Ashanti Regional Record — 51.69 seconds, 400m Hurdles",
         "Gold Medal — 2026 National Open Championships Cape Coast, U20 Boys 400m Hurdles (52.34s)",
-        "3× Prempeh College Athletics Champion — Form 1, Form 2 and Form 3"
+        "National SHS 800m Champion 2026",
+        "3× Prempeh College Athletics Champion — Form 1, Form 2 and Form 3",
+        "3× Prempeh College 800m Champion — Form 1, Form 2 and Form 3",
+        "Overall Best Male Athlete × 2 — 2025 Ashanti Region Schools Super Zonal",
+        "Best JHS Boys Football Player — UBaSSA Games UG@75 2023 (KNUST)",
+        "Top Scorer — 2026 Ashanti Regional Inter-schools Soccer Qualifiers",
+        "2nd Captain — Prempeh College SHS Soccer Team (Bronze 2024 & 2026)"
       ],
       "sameAs": []
     },
@@ -1462,6 +1469,16 @@
     section { padding: 3.5rem 1.2rem; }
     * { word-break: break-word; }
 
+    /* ── SOCCER ── */
+    #soccer > div > div:nth-child(3) { grid-template-columns: 1fr !important; }
+    #soccer > div > div:nth-child(2) { grid-template-columns: repeat(2,1fr) !important; }
+
+    /* ── TIMELINE ── */
+    #timeline > div > div:nth-child(2) > div { grid-template-columns: 1fr !important; }
+    #timeline > div > div:nth-child(2) > div > div:first-child { text-align:left !important; margin-right:0 !important; }
+    #timeline > div > div:nth-child(2) > div > div:nth-child(2) { display:none !important; }
+    #timeline > div > div:nth-child(2) > div > div:last-child { margin-left:0 !important; display:none !important; }
+
     /* ── HERO ── */
     #hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-left { padding: 6rem 1.2rem 2rem; }
@@ -1478,7 +1495,7 @@
     .about-visual img { height: 300px; }
 
     /* ── STATS ── */
-    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 1.5rem; }
     .stat-divider { display: none; }
     .stat-number { font-size: 3rem; }
     #stats { padding: 3rem 1.2rem; }
@@ -1641,7 +1658,8 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#achievements">Achievements</a></li>
-    <li><a href="#technique">Technique</a></li>
+    <li><a href="#soccer">Soccer</a></li>
+    <li><a href="#timeline">Timeline</a></li>
     <li><a href="#training">Training</a></li>
     <li><a href="#news">News</a></li>
     <li><a href="#gallery">Gallery</a></li>
@@ -1655,7 +1673,8 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="#about" class="mobile-link">About</a>
   <a href="#achievements" class="mobile-link">Achievements</a>
-  <a href="#technique" class="mobile-link">Technique</a>
+  <a href="#soccer" class="mobile-link">Soccer</a>
+  <a href="#timeline" class="mobile-link">Timeline</a>
   <a href="#training" class="mobile-link">Training</a>
   <a href="#news" class="mobile-link">News</a>
   <a href="#gallery" class="mobile-link">Gallery</a>
@@ -1713,12 +1732,18 @@
       <span class="ticker-item">🥇 Gold Medalist · Ashanti Regional Championships</span>
       <span class="ticker-item">⏱️ Regional Record: 51.69s · 400M Hurdles</span>
       <span class="ticker-item">🏆 3× Prempeh College Champion · Form 1, 2 & 3</span>
-      <span class="ticker-item">🇬🇭 Prempeh College · Kumasi Ghana</span>
+      <span class="ticker-item">⚽ Right Winger · 2nd Captain · Prempeh College Soccer</span>
+      <span class="ticker-item">🏅 Overall Best Male Athlete · 2025 Ashanti Region Super Zonal</span>
+      <span class="ticker-item">🥇 National SHS 800m Champion · 2026</span>
+      <span class="ticker-item">🇬🇭 National U20 400m Hurdles Record Holder · Ghana</span>
       <span class="ticker-item">🌍 World U20 Championships Qualifier · Oregon USA 2026</span>
       <span class="ticker-item">🥇 Gold Medalist · Ashanti Regional Championships</span>
       <span class="ticker-item">⏱️ Regional Record: 51.69s · 400M Hurdles</span>
       <span class="ticker-item">🏆 3× Prempeh College Champion · Form 1, 2 & 3</span>
-      <span class="ticker-item">🇬🇭 Prempeh College · Kumasi Ghana</span>
+      <span class="ticker-item">⚽ Right Winger · 2nd Captain · Prempeh College Soccer</span>
+      <span class="ticker-item">🏅 Overall Best Male Athlete · 2025 Ashanti Region Super Zonal</span>
+      <span class="ticker-item">🥇 National SHS 800m Champion · 2026</span>
+      <span class="ticker-item">🇬🇭 National U20 400m Hurdles Record Holder · Ghana</span>
     </div>
   </div>
 </section>
@@ -1743,16 +1768,17 @@
       <h2 class="section-title">Built to <span class="title-accent">Clear</span><br>Every Hurdle</h2>
       <div class="about-text">
         <p>
-          <span class="about-highlight">Bossman Kusi Appiah</span> is a powerhouse in the making — a Ghanaian track and field sensation who has turned the 400m hurdles into his personal stage. Representing Prempeh College in the Ashanti Region, Bossman has shown the speed, stamina, and technique that are the hallmarks of a future champion.
+          <span class="about-highlight">Bossman Kusi Appiah</span> is a powerhouse in the making — a Ghanaian multi-sport sensation who has turned the 400m hurdles into his personal stage while also excelling as a footballer. Representing Prempeh College in the Ashanti Region, Bossman combines explosive speed, elite stamina, and a winner's mentality across every discipline he touches.
         </p>
         <p>
-          In the 2025/26 Ashanti Region Schools & Colleges Athletics Super Zonal championships, Bossman did not just win — he <span class="about-highlight">shattered the regional record</span>, clocking an astonishing 51.69 seconds to claim gold. At the 2026 National Open Championships in Cape Coast, he won gold in 52.34s — earning <span class="about-highlight">qualification to the 2026 World U20 Athletics Championships in Eugene, Oregon, USA</span>.
+          In the 2025/26 Ashanti Region Schools & Colleges Athletics Super Zonal championships, Bossman did not just win — he <span class="about-highlight">shattered the regional record</span>, clocking an astonishing 51.69 seconds to claim gold. At the 2026 National Open Championships in Cape Coast, he won gold in 52.34s — earning <span class="about-highlight">qualification to the 2026 World U20 Athletics Championships in Eugene, Oregon, USA</span>. He is Ghana's <span class="about-highlight">National U20 Record Holder</span> in the 400m Hurdles.
         </p>
         <p>
-          A three-time consecutive Prempeh College champion (Form 1, 2 and 3), Bossman's dominance is no accident. With elite footwork over 10 hurdles, controlled aggression in the back stretch, and a finishing kick that few can match, he is a name that Ghanaian athletics — and the world — will be hearing for years to come.
+          A three-time consecutive Prempeh College athletics champion and two-time Overall Best Male Athlete, Bossman is equally dangerous on the football pitch — a lightning-quick right winger, 2nd captain of the school soccer team, and the top scorer of the 2026 Ashanti Regional Soccer Qualifiers.
         </p>
       </div>
       <div class="about-school">🏫 Prempeh College · Kumasi, Ghana</div>
+      <div class="about-school" style="margin-top:0.6rem; border-color:rgba(0,107,63,0.3); color:#4ade80;">⚽ Right Winger · 2nd Captain · Division 2 · Bafag Rainbow FC</div>
     </div>
   </div>
 </section>
@@ -1768,7 +1794,7 @@
 </div>
 
 <section id="stats">
-  <div class="stats-grid">
+  <div class="stats-grid" style="grid-template-columns:repeat(6,1fr);">
     <div class="stat-item fade-in">
       <div class="stat-number">51.69</div>
       <div class="stat-label">Ashanti Regional Record (s)</div>
@@ -1781,7 +1807,17 @@
     <div class="stat-divider"></div>
     <div class="stat-item fade-in">
       <div class="stat-number">3×</div>
-      <div class="stat-label">Prempeh College Champion</div>
+      <div class="stat-label">Prempeh Hurdles Champion</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item fade-in">
+      <div class="stat-number">3×</div>
+      <div class="stat-label">Prempeh 800m Champion</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item fade-in">
+      <div class="stat-number">2×</div>
+      <div class="stat-label">Overall Best Male Athlete</div>
     </div>
     <div class="stat-divider"></div>
     <div class="stat-item fade-in">
@@ -1809,10 +1845,18 @@
     <div class="achievement-item gold-item fade-in">
       <div class="achievement-year">2026</div>
       <div class="achievement-info">
-        <div class="achievement-title">🥇 Gold Medal — Ashanti Regional Record</div>
-        <div class="achievement-event">Ashanti Region Schools & Colleges Athletics · Super Zonal · 400m Hurdles</div>
+        <div class="achievement-title">🥇 Gold Medal — Ashanti Regional Record · 400m Hurdles</div>
+        <div class="achievement-event">Ashanti Region Schools & Colleges Athletics · Super Zonal · 400m Hurdles · National U20 Record Holder</div>
       </div>
       <div class="achievement-time">51.69s <small>Record</small></div>
+    </div>
+    <div class="achievement-item gold-item fade-in">
+      <div class="achievement-year">2026</div>
+      <div class="achievement-info">
+        <div class="achievement-title">🥇 National SHS 800m Champion</div>
+        <div class="achievement-event">National SHS Championships · 800m · Equalized 800m Ashanti Regional Record</div>
+      </div>
+      <div class="achievement-time">— <small>National Champion</small></div>
     </div>
     <div class="achievement-item gold-item fade-in">
       <div class="achievement-year">2026</div>
@@ -1822,6 +1866,14 @@
       </div>
       <div class="achievement-time">52.34s <small>1st Place</small></div>
     </div>
+    <div class="achievement-item gold-item fade-in" style="border-left-color:var(--gold); background:rgba(255,209,0,0.04);">
+      <div class="achievement-year">2025</div>
+      <div class="achievement-info">
+        <div class="achievement-title">🏆 Overall Best Male Athlete × 2</div>
+        <div class="achievement-event">2025 Ashanti Region Schools & Colleges Super Zonal Athletics · Overall Best Male Athlete Award (won twice)</div>
+      </div>
+      <div class="achievement-time">— <small>Best Athlete</small></div>
+    </div>
     <div class="achievement-item gold-item fade-in">
       <div class="achievement-year">2024–26</div>
       <div class="achievement-info">
@@ -1829,6 +1881,30 @@
         <div class="achievement-event">400m Hurdles · Won consecutively in Form 1, Form 2 and Form 3</div>
       </div>
       <div class="achievement-time">— <small>3 in a row</small></div>
+    </div>
+    <div class="achievement-item gold-item fade-in">
+      <div class="achievement-year">2024–26</div>
+      <div class="achievement-info">
+        <div class="achievement-title">🥇 3× Prempeh College 800m Champion</div>
+        <div class="achievement-event">800m · Won in Form 1, Form 2 and Form 3 — including equalized Ashanti 800m Regional Record (Form 3)</div>
+      </div>
+      <div class="achievement-time">— <small>3 in a row</small></div>
+    </div>
+    <div class="achievement-item fade-in" style="border-left-color:#4ade80;">
+      <div class="achievement-year">2023</div>
+      <div class="achievement-info">
+        <div class="achievement-title">⚽ Best JHS Boys Football Player — UBaSSA Games</div>
+        <div class="achievement-event">UBaSSA Games UG@75 · 2023 · Best Football Player Award · JHS Boys Category · KNUST</div>
+      </div>
+      <div class="achievement-time">— <small>Best Player</small></div>
+    </div>
+    <div class="achievement-item fade-in">
+      <div class="achievement-year">2026</div>
+      <div class="achievement-info">
+        <div class="achievement-title">⚽ Top Scorer — Ashanti Region Soccer Qualifiers</div>
+        <div class="achievement-event">2026 Ashanti Regional Inter-schools Soccer Qualifiers · Right Winger · 2nd Captain · Prempeh College</div>
+      </div>
+      <div class="achievement-time">— <small>Golden Boot</small></div>
     </div>
     <div class="achievement-item fade-in">
       <div class="achievement-year">2026</div>
@@ -2174,6 +2250,146 @@
       <div class="gallery-caption">▶ 400m Hurdles World Record · 45.94s</div>
     </div>
 
+    <!-- ── NEW: Soccer & Multi-Sport images ── -->
+    <div class="gallery-card gal-img" data-src="images/soccer-division2.jpg" data-caption="⚽ Division 2 · Bafag Rainbow FC · Signed at Age 15" onclick="openLightbox(this)">
+      <div class="gallery-inner" style="background:url('images/soccer-division2.jpg') center top/cover no-repeat;"></div>
+      <div class="gallery-caption">⚽ Division 2 · Bafag Rainbow · Age 15</div>
+      <div class="gallery-zoom">⤢</div>
+    </div>
+
+    <div class="gallery-card gal-img" data-src="images/soccer-team.jpg" data-caption="👥 Prempeh College SHS Soccer Team · 2nd Captain · Right Winger" onclick="openLightbox(this)">
+      <div class="gallery-inner" style="background:url('images/soccer-team.jpg') center top/cover no-repeat;"></div>
+      <div class="gallery-caption">👥 Prempeh College SHS Soccer Team</div>
+      <div class="gallery-zoom">⤢</div>
+    </div>
+
+    <div class="gallery-card gal-img" data-src="images/best-male-athlete.jpg" data-caption="🏆 Overall Best Male Athlete · 2025 Ashanti Region Super Zonal" onclick="openLightbox(this)">
+      <div class="gallery-inner" style="background:url('images/best-male-athlete.jpg') center/cover no-repeat;"></div>
+      <div class="gallery-caption">🏆 Overall Best Male Athlete · 2025</div>
+      <div class="gallery-zoom">⤢</div>
+    </div>
+
+    <div class="gallery-card gal-img" data-src="images/ubassa-results.jpg" data-caption="📋 UBaSSA Games 2023 · Best JHS Boys Football Player · KNUST" onclick="openLightbox(this)">
+      <div class="gallery-inner" style="background:url('images/ubassa-results.jpg') center/cover no-repeat;"></div>
+      <div class="gallery-caption">📋 UBaSSA Best JHS Boys Football Player</div>
+      <div class="gallery-zoom">⤢</div>
+    </div>
+
+    <div class="gallery-card gal-img" data-src="images/receiving-trophy2.jpg" data-caption="🏆 Receiving Trophy · Champion on the Track" onclick="openLightbox(this)">
+      <div class="gallery-inner" style="background:url('images/receiving-trophy2.jpg') center top/cover no-repeat;"></div>
+      <div class="gallery-caption">🏆 Receiving Trophy · Champion Moment</div>
+      <div class="gallery-zoom">⤢</div>
+    </div>
+
+    <div class="gallery-card gal-img" data-src="images/medal-trio.jpg" data-caption="🥉 Prempeh College Athletes · Medals Ceremony" onclick="openLightbox(this)">
+      <div class="gallery-inner" style="background:url('images/medal-trio.jpg') center top/cover no-repeat;"></div>
+      <div class="gallery-caption">🥉 Medal Ceremony · Prempeh College</div>
+      <div class="gallery-zoom">⤢</div>
+    </div>
+
+    <div class="gallery-card gal-img" data-src="images/award-ceremony.jpg" data-caption="🏅 Award Ceremony · Overall Best Male Athlete · Stage Presentation" onclick="openLightbox(this)">
+      <div class="gallery-inner" style="background:url('images/award-ceremony.jpg') center/cover no-repeat;"></div>
+      <div class="gallery-caption">🏅 Award Ceremony · Best Male Athlete</div>
+      <div class="gallery-zoom">⤢</div>
+    </div>
+
+    <div class="gallery-card gal-img" data-src="images/track-778.jpg" data-caption="🏃 Prempeh #778 · On the Track · Ashanti Region Super Zonal" onclick="openLightbox(this)">
+      <div class="gallery-inner" style="background:url('images/track-778.jpg') center top/cover no-repeat;"></div>
+      <div class="gallery-caption">🏃 Prempeh #778 · Race Day</div>
+      <div class="gallery-zoom">⤢</div>
+    </div>
+
+    <div class="gallery-card gal-img" data-src="images/ghana-jersey.jpg" data-caption="🇬🇭 Wearing Ghana Colours · JHS Days · Future Star" onclick="openLightbox(this)">
+      <div class="gallery-inner" style="background:url('images/ghana-jersey.jpg') center top/cover no-repeat;"></div>
+      <div class="gallery-caption">🇬🇭 Ghana Jersey · JHS · Future Star</div>
+      <div class="gallery-zoom">⤢</div>
+    </div>
+
+    <div class="gallery-card gal-img" data-src="images/athletics-team-polo.jpg" data-caption="🟢 Prempeh College Athletics Team 2026 · Official Polo" onclick="openLightbox(this)">
+      <div class="gallery-inner" style="background:url('images/athletics-team-polo.jpg') center top/cover no-repeat;"></div>
+      <div class="gallery-caption">🟢 Prempeh Athletics Team · 2026</div>
+      <div class="gallery-zoom">⤢</div>
+    </div>
+
+    <div class="gallery-card gal-img" data-src="images/solo-medal.jpg" data-caption="🥇 Solo Medal Photo · Ghana Premier League Stadium" onclick="openLightbox(this)">
+      <div class="gallery-inner" style="background:url('images/solo-medal.jpg') center top/cover no-repeat;"></div>
+      <div class="gallery-caption">🥇 Medal Display · Stadium</div>
+      <div class="gallery-zoom">⤢</div>
+    </div>
+
+    <div class="gallery-card gal-img" data-src="images/soccer-div1.jpg" data-caption="⚽ Division 1 Football · Bossman in Action" onclick="openLightbox(this)">
+      <div class="gallery-inner" style="background:url('images/soccer-div1.jpg') center top/cover no-repeat;"></div>
+      <div class="gallery-caption">⚽ Division 1 Football</div>
+      <div class="gallery-zoom">⤢</div>
+    </div>
+
+    <!-- ── NEW: Videos ── -->
+    <div class="gallery-card gal-video">
+      <div class="gallery-inner" style="background:#0a0a0a; padding:0; overflow:hidden;">
+        <video class="gallery-video-el" playsinline controls preload="metadata"
+          poster="images/track-778.jpg"
+          style="width:100%; height:100%; object-fit:cover; display:block;">
+          <source src="videos/regional-800m-2025.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="gallery-caption">📹 Regional 800m Champion · 2025</div>
+    </div>
+
+    <div class="gallery-card gal-video">
+      <div class="gallery-inner" style="background:#0a0a0a; padding:0; overflow:hidden;">
+        <video class="gallery-video-el" playsinline controls preload="metadata"
+          poster="images/best-male-athlete.jpg"
+          style="width:100%; height:100%; object-fit:cover; display:block;">
+          <source src="videos/vid-wa0004.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="gallery-caption">📹 Race Highlights · 2026</div>
+    </div>
+
+    <div class="gallery-card gal-video">
+      <div class="gallery-inner" style="background:#0a0a0a; padding:0; overflow:hidden;">
+        <video class="gallery-video-el" playsinline controls preload="metadata"
+          poster="images/athletics-team-polo.jpg"
+          style="width:100%; height:100%; object-fit:cover; display:block;">
+          <source src="videos/vid-wa0006.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="gallery-caption">📹 Championships · Behind the Scenes</div>
+    </div>
+
+    <div class="gallery-card gal-video">
+      <div class="gallery-inner" style="background:#0a0a0a; padding:0; overflow:hidden;">
+        <video class="gallery-video-el" playsinline controls preload="metadata"
+          poster="images/track-778.jpg"
+          style="width:100%; height:100%; object-fit:cover; display:block;">
+          <source src="videos/vid-wa0007.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="gallery-caption">📹 400m Hurdles · Race Footage</div>
+    </div>
+
+    <div class="gallery-card gal-video">
+      <div class="gallery-inner" style="background:#0a0a0a; padding:0; overflow:hidden;">
+        <video class="gallery-video-el" playsinline controls preload="metadata"
+          poster="images/on-blocks.jpg"
+          style="width:100%; height:100%; object-fit:cover; display:block;">
+          <source src="videos/400m-2024.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="gallery-caption">📹 400m Hurdles · 2024 Race</div>
+    </div>
+
+    <div class="gallery-card gal-video">
+      <div class="gallery-inner" style="background:#0a0a0a; padding:0; overflow:hidden;">
+        <video class="gallery-video-el" playsinline controls preload="metadata"
+          poster="images/soccer-team.jpg"
+          style="width:100%; height:100%; object-fit:cover; display:block;">
+          <source src="videos/vid-wa0002.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="gallery-caption">📹 Celebrations · Championship Win</div>
+    </div>
+
   </div><!-- end #galleryMore -->
 
   <!-- View More / Show Less button -->
@@ -2271,6 +2487,203 @@
 <section id="quote">
   <p class="quote-text">Every Hurdle Is Just Another Obstacle That Wasn't Ready For Me</p>
   <p class="quote-attr">— Bossman Kusi Appiah · 400M Hurdles</p>
+</section>
+
+<!-- ─── SOCCER / MULTI-SPORT ─── -->
+<section id="soccer" style="background:var(--dark2); padding:6rem 4rem; position:relative; overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%, rgba(0,107,63,0.08) 0%, transparent 70%); pointer-events:none;"></div>
+  <div style="max-width:1200px; margin:0 auto; position:relative; z-index:1;">
+
+    <div class="fade-in" style="margin-bottom:3rem;">
+      <p class="section-label">Multi-Sport Athlete</p>
+      <h2 class="section-title">The <span class="title-accent">Soccer</span> Side</h2>
+      <p style="color:rgba(245,245,240,0.5); max-width:620px; margin-top:0.5rem; line-height:1.7; font-size:0.95rem;">
+        Beyond the hurdles track, Bossman Kusi Appiah is a gifted footballer — a dynamic right winger with pace, skill, and a winning mentality that transcends any single sport.
+      </p>
+    </div>
+
+    <!-- Soccer stat bar -->
+    <div class="fade-in" style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; margin-bottom:3rem; background:rgba(255,255,255,0.04);">
+      <div style="background:var(--dark3); padding:1.8rem 1.5rem; text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:3rem; color:#4ade80; line-height:1;">⚽</div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gray); margin-top:0.4rem;">Right Winger</div>
+        <div style="font-size:0.8rem; color:rgba(245,245,240,0.5); margin-top:0.2rem;">Position</div>
+      </div>
+      <div style="background:var(--dark3); padding:1.8rem 1.5rem; text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:3rem; color:var(--gold); line-height:1;">15</div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gray); margin-top:0.4rem;">Age Signed</div>
+        <div style="font-size:0.8rem; color:rgba(245,245,240,0.5); margin-top:0.2rem;">Division 2 · Bafag Rainbow</div>
+      </div>
+      <div style="background:var(--dark3); padding:1.8rem 1.5rem; text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:3rem; color:var(--red); line-height:1;">2×</div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gray); margin-top:0.4rem;">3rd Place</div>
+        <div style="font-size:0.8rem; color:rgba(245,245,240,0.5); margin-top:0.2rem;">Ashanti Region Soccer (2024 & 2026)</div>
+      </div>
+      <div style="background:var(--dark3); padding:1.8rem 1.5rem; text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:3rem; color:#60a5fa; line-height:1;">#2</div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gray); margin-top:0.4rem;">2nd Captain</div>
+        <div style="font-size:0.8rem; color:rgba(245,245,240,0.5); margin-top:0.2rem;">Prempeh College SHS Soccer Team</div>
+      </div>
+    </div>
+
+    <!-- Soccer achievements grid -->
+    <div class="fade-in" style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:3rem;">
+
+      <!-- Left: image -->
+      <div style="position:relative; overflow:hidden;">
+        <img src="images/soccer-division2.jpg" alt="Bossman Kusi Appiah in Division 2 Bafag Rainbow jersey" style="width:100%; height:380px; object-fit:cover; object-position:center top; display:block;"/>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,0.9) 0%,transparent 55%);"></div>
+        <div style="position:absolute;bottom:1.2rem;left:1.2rem;right:1.2rem;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem;">Age 15 · Division 2</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:1px;">Bafag Rainbow FC</div>
+          <div style="font-size:0.82rem;color:rgba(245,245,240,0.6);margin-top:0.2rem;">Signed as a registered player at only 15 years old</div>
+        </div>
+      </div>
+
+      <!-- Right: highlights -->
+      <div style="display:flex; flex-direction:column; gap:1rem;">
+
+        <div style="background:var(--dark3); border:1px solid rgba(255,255,255,0.05); border-left:3px solid #4ade80; padding:1.4rem 1.5rem;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#4ade80;margin-bottom:0.4rem;">JHS · UBaSSA Games 2023</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:1px;margin-bottom:0.3rem;">🏅 Best Player of Tournament</div>
+          <div style="font-size:0.83rem;color:rgba(245,245,240,0.55);">Named Best JHS Boys Football Player at the UBaSSA Games UG@75 — 2023, representing KNUST. A dominant performance that earned national recognition.</div>
+        </div>
+
+        <div style="background:var(--dark3); border:1px solid rgba(255,255,255,0.05); border-left:3px solid var(--gold); padding:1.4rem 1.5rem;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;">Milo Games · JHS Record</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:1px;margin-bottom:0.3rem;">📈 JHS1 → 3rd · JHS2 → 2nd · JHS3 → 3rd</div>
+          <div style="font-size:0.83rem;color:rgba(245,245,240,0.55);">Consistently qualified his school for the prestigious Milo Games across all three JHS years. A leader who makes those around him better every season.</div>
+        </div>
+
+        <div style="background:var(--dark3); border:1px solid rgba(255,255,255,0.05); border-left:3px solid var(--red); padding:1.4rem 1.5rem;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:0.4rem;">SHS 2024 & 2026 · Ashanti Region</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:1px;margin-bottom:0.3rem;">🥉 2nd Captain · Bronze Medalist</div>
+          <div style="font-size:0.83rem;color:rgba(245,245,240,0.55);">Serving as second captain of Prempeh College's SHS soccer team, he helped lead the side to bronze in the Ashanti Regional Inter-schools Soccer Competition in both 2024 and 2026.</div>
+        </div>
+
+        <div style="background:var(--dark3); border:1px solid rgba(255,255,255,0.05); border-left:3px solid #60a5fa; padding:1.4rem 1.5rem;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#60a5fa;margin-bottom:0.4rem;">2026 Qualifiers · Top Scorer</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:1px;margin-bottom:0.3rem;">⚽ Golden Boot · Ashanti Region</div>
+          <div style="font-size:0.83rem;color:rgba(245,245,240,0.55);">Named top scorer of the 2026 Ashanti Regional Inter-schools Soccer Qualifiers — lethal in front of goal and electric on the right wing.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Soccer team photo -->
+    <div class="fade-in" style="position:relative; overflow:hidden;">
+      <img src="images/soccer-team.jpg" alt="Prempeh College SHS Soccer Team" style="width:100%; height:320px; object-fit:cover; object-position:center top; display:block;"/>
+      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(10,10,10,0.85) 0%,rgba(10,10,10,0.2) 60%);"></div>
+      <div style="position:absolute;top:50%;left:2.5rem;transform:translateY(-50%);">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;">Prempeh College</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2.5rem;line-height:1.05;letter-spacing:1px;">SHS Soccer Team<br><span style="color:var(--gold);">2nd Captain · Right Wing</span></div>
+        <div style="margin-top:0.75rem;font-size:0.85rem;color:rgba(245,245,240,0.6);">Bronze · Ashanti Region 2024 · 2026</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── CAREER TIMELINE ─── -->
+<section id="timeline" style="background:var(--dark); padding:6rem 4rem; position:relative; overflow:hidden;">
+  <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:2px;height:100%;background:linear-gradient(to bottom,transparent,rgba(255,209,0,0.15) 10%,rgba(255,209,0,0.15) 90%,transparent); pointer-events:none;"></div>
+  <div style="max-width:900px; margin:0 auto; position:relative; z-index:1;">
+
+    <div class="fade-in" style="text-align:center; margin-bottom:4rem;">
+      <p class="section-label" style="justify-content:center;">The Journey</p>
+      <h2 class="section-title">Career <span class="title-accent">Timeline</span></h2>
+      <p style="color:rgba(245,245,240,0.45); margin-top:0.5rem; font-size:0.9rem; letter-spacing:1px;">From JHS standout to World U20 qualifier — every milestone that shaped a champion</p>
+    </div>
+
+    <!-- Timeline items -->
+    <div style="display:flex; flex-direction:column; gap:0;">
+
+      <!-- 2023 -->
+      <div class="fade-in" style="display:grid; grid-template-columns:1fr 48px 1fr; gap:0; align-items:start; margin-bottom:2rem;">
+        <div style="background:var(--dark3); border:1px solid rgba(255,255,255,0.06); padding:1.4rem 1.5rem; margin-right:1.5rem; text-align:right;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#4ade80;margin-bottom:0.3rem;">2023 · JHS</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;line-height:1.15;margin-bottom:0.4rem;">🏅 UBaSSA Best JHS Boys Football Player</div>
+          <div style="font-size:0.8rem;color:rgba(245,245,240,0.5);">UG@75 Games — KNUST · Nominated Best Football Player among all JHS Boys teams</div>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:0;">
+          <div style="width:20px;height:20px;background:var(--gold);border-radius:50%;border:3px solid var(--dark);flex-shrink:0;margin-top:1rem;"></div>
+          <div style="width:2px;flex:1;background:rgba(255,209,0,0.15);min-height:60px;"></div>
+        </div>
+        <div style="margin-left:1.5rem; padding-top:1rem;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:2rem;color:rgba(255,255,255,0.05); letter-spacing:3px;">2023</div>
+        </div>
+      </div>
+
+      <!-- 2024 Form 1 SHS -->
+      <div class="fade-in" style="display:grid; grid-template-columns:1fr 48px 1fr; gap:0; align-items:start; margin-bottom:2rem;">
+        <div style="margin-right:1.5rem; padding-top:1rem; text-align:right;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:2rem;color:rgba(255,255,255,0.05); letter-spacing:3px;">2024</div>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:0;">
+          <div style="width:20px;height:20px;background:var(--gold);border-radius:50%;border:3px solid var(--dark);flex-shrink:0;margin-top:1rem;"></div>
+          <div style="width:2px;flex:1;background:rgba(255,209,0,0.15);min-height:60px;"></div>
+        </div>
+        <div style="background:var(--dark3); border:1px solid rgba(255,255,255,0.06); padding:1.4rem 1.5rem; margin-left:1.5rem;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem;">2024 · SHS Form 1</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;line-height:1.15;margin-bottom:0.4rem;">🥇 800m Gold · 🥈 400m Hurdles Silver · 🥉 400m Bronze</div>
+          <div style="font-size:0.8rem;color:rgba(245,245,240,0.5);">Dominant debut in senior athletics. Registered and played for Division 2 team Bafag Rainbow at only 15 years old. Soccer: School placed 3rd at Ashanti Region.</div>
+        </div>
+      </div>
+
+      <!-- 2025 Form 2 -->
+      <div class="fade-in" style="display:grid; grid-template-columns:1fr 48px 1fr; gap:0; align-items:start; margin-bottom:2rem;">
+        <div style="background:rgba(255,209,0,0.05); border:1px solid rgba(255,209,0,0.15); padding:1.4rem 1.5rem; margin-right:1.5rem; text-align:right;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem;">2025 · SHS Form 2</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;line-height:1.15;margin-bottom:0.4rem;">🏆 Overall Best Male Athlete × 2 · 🥇 800m · 🥈 400m · 🥇 400m Hurdles</div>
+          <div style="font-size:0.8rem;color:rgba(245,245,240,0.5);">Won Overall Best Male Athlete award twice. Dominated across multiple events. Regional 800m champion — later equalised the 800m regional record.</div>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:0;">
+          <div style="width:24px;height:24px;background:var(--gold);border-radius:50%;border:4px solid var(--dark);flex-shrink:0;margin-top:1rem; box-shadow:0 0 16px rgba(255,209,0,0.4);"></div>
+          <div style="width:2px;flex:1;background:rgba(255,209,0,0.25);min-height:60px;"></div>
+        </div>
+        <div style="margin-left:1.5rem; padding-top:1rem;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:2rem;color:rgba(255,255,255,0.05); letter-spacing:3px;">2025</div>
+          <div style="margin-top:0.5rem;"><span style="font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:var(--gold);color:var(--dark);padding:0.25rem 0.75rem;">★ BEST ATHLETE</span></div>
+        </div>
+      </div>
+
+      <!-- 2026 Form 3 — record -->
+      <div class="fade-in" style="display:grid; grid-template-columns:1fr 48px 1fr; gap:0; align-items:start; margin-bottom:2rem;">
+        <div style="margin-right:1.5rem; padding-top:1rem; text-align:right;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:2rem;color:rgba(255,255,255,0.05); letter-spacing:3px;">2026</div>
+          <div style="margin-top:0.5rem; display:flex; justify-content:flex-end;">
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:var(--red);color:#fff;padding:0.25rem 0.75rem;">⏱ RECORD</span>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:0;">
+          <div style="width:26px;height:26px;background:var(--red);border-radius:50%;border:4px solid var(--dark);flex-shrink:0;margin-top:1rem; box-shadow:0 0 20px rgba(232,0,29,0.5);"></div>
+          <div style="width:2px;flex:1;background:rgba(232,0,29,0.25);min-height:60px;"></div>
+        </div>
+        <div style="background:rgba(232,0,29,0.05); border:1px solid rgba(232,0,29,0.2); padding:1.4rem 1.5rem; margin-left:1.5rem;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:0.3rem;">2026 · SHS Form 3</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;line-height:1.15;margin-bottom:0.4rem;">🥇 800m · 51.69s Regional Record · 🌍 World U20 Qualifier 52.34s</div>
+          <div style="font-size:0.8rem;color:rgba(245,245,240,0.5);">Shattered the Ashanti Regional 400m Hurdles record (51.69s). Qualified for 2026 World U20 Athletics Championships in Eugene, Oregon. National U20 400m Hurdles Record Holder and 800m champion. Soccer: 2nd captain, team finishes 3rd again.</div>
+        </div>
+      </div>
+
+      <!-- Future -->
+      <div class="fade-in" style="display:grid; grid-template-columns:1fr 48px 1fr; gap:0; align-items:start;">
+        <div style="background:rgba(96,165,250,0.05); border:1px solid rgba(96,165,250,0.2); border-style:dashed; padding:1.4rem 1.5rem; margin-right:1.5rem; text-align:right;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#60a5fa;margin-bottom:0.3rem;">August 2026 · Eugene, Oregon USA</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;line-height:1.15;margin-bottom:0.4rem;">🌍 World U20 Athletics Championships</div>
+          <div style="font-size:0.8rem;color:rgba(245,245,240,0.5);">The world stage awaits. Ghana's brightest athletics prospect takes on the best U20 hurdlers on the planet.</div>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:0;">
+          <div style="width:26px;height:26px;background:#60a5fa;border-radius:50%;border:4px solid var(--dark);flex-shrink:0;margin-top:1rem; animation:pulse 2s infinite;"></div>
+        </div>
+        <div style="margin-left:1.5rem; padding-top:1rem;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#60a5fa; letter-spacing:3px; opacity:0.25;">2026</div>
+          <div style="margin-top:0.5rem;"><span style="font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:#60a5fa;color:var(--dark);padding:0.25rem 0.75rem;">🌍 NEXT LEVEL</span></div>
+        </div>
+      </div>
+
+    </div><!-- end timeline -->
+  </div>
 </section>
 
 <!-- ─── PROGRESS / SKILLS ─── -->
@@ -2537,6 +2950,20 @@
           <div class="tcard-author-info">
             <div class="tcard-name">Elite Schools League</div>
             <div class="tcard-role">Official Statement · Cape Coast 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcard" style="border-top-color:#4ade80;">
+        <div class="tcard-quote" style="color:#4ade80;">"</div>
+        <p class="tcard-text">
+          Bossman is the most complete athlete I have seen at this level. On the track he destroys records. On the football field he terrorizes defences as a right winger. Winning Best Player at the UBaSSA Games and then becoming a World U20 qualifier — this young man is simply extraordinary.
+        </p>
+        <div class="tcard-author">
+          <div class="tcard-avatar" style="background:linear-gradient(135deg,#059669,#4ade80); color:var(--white);">PF</div>
+          <div class="tcard-author-info">
+            <div class="tcard-name">Prempeh College Fan</div>
+            <div class="tcard-role">Supporter · Ashanti Region, Ghana</div>
           </div>
         </div>
       </div>
